@@ -1,13 +1,20 @@
 language: java
+
 os: linux
-jdk: oraclejdk8
-script: mvn test -DargLine="-Dcontiperf.active=false"
+
+jdk:
+  - oraclejdk8
+
+script:
+    - mvn test -DargLine="-Dcontiperf.active=false"
+
 branches:
+
   only:
-    development_junit
+    - development_junit
 
   except:
-    master
-    development
+    - master
+    - development
 
 
